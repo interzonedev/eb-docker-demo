@@ -17,7 +17,7 @@ deploy:
   env: "eb-docker-demo-tci-env"
   bucket_name: "elasticbeanstalk-us-west-1-815332568426"
   bucket_path: "docker"
-  # on:
-  #   branch: main
+  on:
+    branch: main
   access_key_id: "$AWS_ACCESS_KEY"
   secret_access_key: "$AWS_SECRET_KEY"
