@@ -8,7 +8,19 @@ port = process.env.PORT || 8080;
 
 // Catch all other routes and return the index file
 app.get('/', (req, res) => {
-  res.send('hello world!!');
+  const request = {
+    url: req.url,
+    method: req.method,
+    headers: req.rawHeaders,
+  };
+  console.log('request: %s', JSON.stringify(request, undefined, 2));
+
+  const response = {
+    status: 'OK',
+    request: request,
+  };
+
+  res.send(response);
 });
 
 // use morgan to log requests to the console
