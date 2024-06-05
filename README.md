@@ -7,12 +7,12 @@ Taken from https://sommershurbaji.medium.com/deploying-a-docker-container-to-aws
 
 To build locally:
 ```
-docker build -t eb-docker-demo .
+docker build -t boltgun69/eb-docker-demo .
 ```
 
 To run locally:
 ```
-docker run -d -p 8080:8080 --name eb-docker-demo eb-docker-demo
+docker run -d -p 8080:8080 --name eb-docker-demo boltgun69/eb-docker-demo
 ```
 
 To stop local container:
@@ -30,4 +30,9 @@ eb open
 To terminate the Elastic Beanstalk environment:
 ```
 eb terminate
+```
+
+To make a request of the endpoint of the local container:
+```
+curl -i -X GET "http://localhost:8080/"
 ```
