@@ -1,5 +1,4 @@
-eb-docker-demo
-==============
+# eb-docker-demo
 
 Demo project for deploying a Docker application to AWS Elastic Beanstalk.
 
@@ -34,5 +33,10 @@ eb terminate
 
 To make a request of the endpoint of the local container:
 ```
-curl -i -X GET "http://localhost:8080/"
+curl -i -X GET "http://localhost:8080"
+```
+
+To make a request of the endpoint in AWS Elastic Beanstalk (example):
+```
+curl -i -X GET "http://eb-docker-demo-gh-env.eba-w23x24z6.us-west-1.elasticbeanstalk.com"
 ```
